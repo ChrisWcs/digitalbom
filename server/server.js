@@ -1,10 +1,10 @@
 const express = require('express');
 const test = require('./test');
+const bom = require('./bom');
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.listen(3000, () => console.log('Server running onport 3000'));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.get('/', (req, res) => res.send("asdfasdf"));
 
-app.get('/1', (req, res) => res.send(`${test.text1}`));
-app.get('/2', (req, res) => res.send(`${test.text2}`));
+app.get( '/nephi1', (req, res) => res.send(`${bom['1 Nephi']['1']['1']}`));
