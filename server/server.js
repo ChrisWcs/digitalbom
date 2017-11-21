@@ -7,4 +7,8 @@ app.listen(3000, () => console.log('Server running onport 3000'));
 
 app.get('/', (req, res) => res.send("asdfasdf"));
 
-app.get( '/nephi1', (req, res) => res.send(`${bom['1 Nephi']['1']['1']}`));
+app.get( '/verse', (req, res) => {
+    const { book, chapter, verse} = req.headers;
+    console.log(book);
+    res.send(bom[book][chapter][verse]);
+});
