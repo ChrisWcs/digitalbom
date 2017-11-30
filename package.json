@@ -30,6 +30,7 @@
   "author": "Christian Hansen",
   "license": "MIT",
   "dependencies": {
+    "cors": "2.8.4",
     "express": "4.16.2",
     "object-assign": "4.1.0",
     "react": "16.0.0",

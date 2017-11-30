@@ -1,7 +1,9 @@
 const express = require('express');
-const test = require('./test');
 const bom = require('./bom');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 app.listen(3000, () => console.log('Server running onport 3000'));
 
