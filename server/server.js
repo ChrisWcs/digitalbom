@@ -7,10 +7,16 @@ app.use(cors());
 
 app.listen(3000, () => console.log('Server running onport 3000'));
 
-app.get('/', (req, res) => res.send("asdfasdf"));
-
 app.get( '/verse', (req, res) => {
     const { book, chapter, verse} = req.headers;
-    console.log(book);
-    res.send(bom[book][chapter][verse]);
+    res.status(200).json({
+        verse: bom[book][chapter][verse]
+    });
+});
+
+app.get( '/chapter', (req, res) => {
+    const { book, chapter } = req.headers;
+    res.status(200).json({
+        chapter: bom[book][chapter]
+    });
 });
